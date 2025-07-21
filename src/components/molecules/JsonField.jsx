@@ -13,6 +13,7 @@ import { Button } from "../atoms/button";
 import { HiMiniTrash, HiPlus } from "react-icons/hi2";
 import { Card, CardContent,  } from "../atoms/card";
 import { Separator } from "../atoms/separator";
+import {motion,AnimatePresence} from 'motion/react'
 
 const TYPE_OPTIONS = ["string", "number", "boolean", "object", "array"];
 
@@ -30,14 +31,24 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
   };
 
   return (
-    <div className={`${depth > 0 ? "ml-6 pl-4 border-l border-gray-200" : ""} space-y-3`}>
+    <div className={`${depth > 0 ? "ml-6 pl-4 border-l border-gray-200" : ""} space-y-3  w-full`}>
+      <AnimatePresence>
       {fields.map((field, index) => {
-        const base = `${nestPath}.${index}`;
+      
+      const base = `${nestPath}.${index}`;
         const type = watch(`${base}.type`);
 
         return (
-          <Card key={field.id} className="overflow-hidden shadow-sm">
-            <CardContent className="p-4 space-y-3">
+          <motion.div
+          key={field.id}
+              layout
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 1 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.4 }}
+          >
+          <Card  className="overflow-hidden shadow-sm">
+            <CardContent className="md:p-4 px-2 py-1.5 space-y-3">
               <div className="flex gap-3 items-start">
                 <Input
                   {...register(`${base}.key`)}
@@ -104,9 +115,10 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
               )}
             </CardContent>
           </Card>
+          </motion.div>
         );
       })}
-
+</AnimatePresence>
       <Button 
         type="button" 
         onClick={handleAddField}

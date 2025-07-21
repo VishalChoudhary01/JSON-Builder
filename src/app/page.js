@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </div>
         <Banner/>
-        <div className="py-10 md:px-6 px-2 flex-wrap flex justify-center gap-7">
+        <div className="py-10 md:px-6 px-2 flex-wrap flex justify-center gap-7 ">
           <section className="md:w-[48%] w-full">
             <SchemaBuilder />
           </section>
