@@ -18,7 +18,7 @@ const Banner = () => {
         </h1>
         
         <p className="text-gray-800 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium">
-          Create, customize, and preview JSON schemas effortlessly 
+          Create, customize, and preview JSON schemas effortlessly . 
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
