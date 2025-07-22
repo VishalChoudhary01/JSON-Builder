@@ -8,8 +8,8 @@ const Banner = () => {
     <section className="w-full pt-24 pb-16 px-2 text-center relative z-10">
       <div className=" mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/40 shadow">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-          <span className="bg-gradient-to-r from-blue-700 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Build Your JSON
+          <span className="bg-gradient-to-r font-poppins tracking-widest from-blue-700 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            Build Your <span className='font-roboto'>JSON</span> 
           </span>
           <br />
           <span className="bg-gradient-to-r from-indigo-600 via-blue-500 to-teal-500 bg-clip-text text-transparent">
@@ -17,7 +17,7 @@ const Banner = () => {
           </span>
         </h1>
         
-        <p className="text-gray-800 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium">
+        <p className="text-neutral-600 italic tracking-wider text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium">
           Create, customize, and preview JSON schemas effortlessly . 
         </p>
 

@@ -11,7 +11,7 @@ import {
 } from "../atoms/select";
 import { Button } from "../atoms/button";
 import { HiMiniTrash, HiPlus } from "react-icons/hi2";
-import { Card, CardContent,  } from "../atoms/card";
+import { Card, CardContent,  } from "../molecules/card";
 import { Separator } from "../atoms/separator";
 import {motion,AnimatePresence} from 'motion/react'
 
@@ -47,8 +47,8 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
           >
-          <Card  className="overflow-hidden shadow-sm">
-            <CardContent className="md:p-4 px-2 py-1.5 space-y-3">
+          <Card  className="  shadow-sm">
+            <CardContent className="md:p-4 px-2 py-1.5 custom-scroll overflow-x-auto space-y-3">
               <div className="flex gap-3 items-start">
                 <Input
                   {...register(`${base}.key`)}

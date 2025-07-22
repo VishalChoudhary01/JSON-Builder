@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <FormContext.Provider value={methods}>
-      <div className="relative min-h-screen">
+      <div className="relative h-screen overflow-auto custom-scroll">
         <div className="absolute inset-0 -z-50">
           <div className="relative bg-fixed h-full w-full [&>div]:absolute [&>div]:bottom-0 [&>div]:right-0 [&>div]:z-[-2] [&>div]:h-full [&>div]:w-full [&>div]:bg-gradient-to-b [&>div]:from-blue-200 [&>div]:to-white">
             <div></div>

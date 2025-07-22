@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Roboto, DM_Mono, Quicksand, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/molecules/Navbar";
 
+// Primary fonts you're already using
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -10,6 +12,39 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// Additional fonts
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-dm-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata = {
@@ -21,7 +56,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${poppins.variable}
+          ${roboto.variable}
+          ${dmMono.variable}
+          ${quicksand.variable}
+          ${ubuntu.variable}
+          antialiased
+          custom-scroll
+        `}
       >
         <Navbar />
         {children}

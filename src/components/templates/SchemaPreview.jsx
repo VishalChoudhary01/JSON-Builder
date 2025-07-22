@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { useFormContextProvider } from "@/contexts/FormContext";
-import { CardContent } from "../atoms/card";
+import { CardContent } from "../molecules/card";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { Button } from "../atoms/button";
 import {motion} from 'motion/react'
@@ -58,7 +58,7 @@ const SchemaPreview = () => {
           <MdOutlineContentCopy className={copied ? "text-green-500 text-lg" : "text-neutral-200 text-xl"} />
         </Button>
 
-        <span className="absolute -top-0 left-1/6 translate-x-1/2 scale-0 group-hover:scale-100 transition-all bg-green-400/30 text-white text-xs px-2 py-1 rounded-md pointer-events-none z-10">
+        <span className="absolute -top-0 left-1/6 translate-x-1/2 font-dm-mono scale-0 group-hover:scale-100 transition-all bg-green-400/30 text-white text-xs px-2 py-1 rounded-md pointer-events-none z-10">
           Copy
         </span>
       </div>
@@ -69,7 +69,7 @@ const SchemaPreview = () => {
       animate={{opacity:1,y:0}}
       
       transition={{duration:0.3}}
-       ref={jsonRef} className="text-sm">{JSON.stringify(jsonOutput, null, 2)}</motion.pre>
+       ref={jsonRef} className="text-sm font-quicksand ">{JSON.stringify(jsonOutput, null, 2)}</motion.pre>
     </CardContent>
   );
 };
