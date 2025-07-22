@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
           ${ubuntu.variable}
           antialiased
           custom-scroll
+          md:h-auto h-dvh
         `}
       >
         <Navbar />

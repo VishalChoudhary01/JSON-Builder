@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 5);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,8 +19,8 @@ const Navbar = () => {
     <nav
       className={`w-full z-50 fixed transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-sm py-2"
-          : "bg-transparent py-3"
+          ? "bg-neutral-50/50  backdrop-blur-lg shadow-sm md:py-4 py-3.5"
+          : "bg-neutral-50/10 md:py-3.5 py-3 backdrop-blur-lg "
       }`}
     >
       <div className=" flex items-center justify-between xl:px-4 lg:px-3.5 md:px-3 px-2">
