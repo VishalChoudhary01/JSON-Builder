@@ -38,11 +38,11 @@ export default function Home() {
         {/* Features/Content Section */}
         <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
               Powerful JSON Schema Builder
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Drag-and-drop interface to build complex JSON schemas with validation, 
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-roboto">
+              Interface to build complex JSON schemas with validation, 
               real-time preview, and export in multiple formats.
             </p>
           </div>

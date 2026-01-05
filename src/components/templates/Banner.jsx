@@ -54,16 +54,16 @@ const Banner = () => {
 
             {/* Headline */}
             <motion.div variants={fadeInUp} className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
-                <span className="block text-gray-900 dark:text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold font-poppins tracking-tight  leading-[1.1]">
+                <span className="block text-gray-900 dark:text-white [Letter-spacing:-0.02em] [Line-height:1.05em] whitespace-nowrap ">
                   Build JSON schemas
                 </span>
-                <span className="block text-gray-600 dark:text-gray-400 animate-pulse">
+                <span className="block text-gray-600 dark:text-gray-400 animate-pulse font-normal">
                   in real time
                 </span>
               </h1>
               
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl font-roboto font-normal">
                 A professional visual editor for creating and customizing JSON schemas with instant validation and preview.
               </p>
             </motion.div>
@@ -77,8 +77,8 @@ const Banner = () => {
                 "Type safety"
               ].map((feature, i) => (
                 <div key={i} className="flex items-start gap-2">
-                  <FiCheck className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
+                  <FiCheck className="w-4 h-4 text-blue-600 dark:text-blue-400/80 mt-0.5 flex-shrink-0 animate-pulse" />
+                  <span className="text-sm text-gray-700 dark:text-gray-300 font-roboto">{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -97,7 +97,7 @@ const Banner = () => {
 
             {/* Trust Bar */}
             <motion.div variants={fadeInUp} className="pt-8 space-y-3">
-              <p className="text-xs text-gray-500 dark:text-gray-500 font-medium uppercase tracking-wider">
+              <p className="text-xs text-gray-500 dark:text-gray-500 font-medium uppercase tracking-wider font-roboto">
                 Trusted by developers at
               </p>
               <div className="flex flex-wrap items-center gap-6">
@@ -204,7 +204,7 @@ const Banner = () => {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-xs text-gray-400 dark:text-gray-600 font-medium">Scroll to explore</span>
+          <span className="text-xs text-gray-400 dark:text-gray-600 font-medium font-poppins">Scroll to explore</span>
           <div className="w-5 h-8 border-2 border-gray-300 dark:border-gray-700 rounded-full flex justify-center p-1 group-hover:border-gray-400 dark:group-hover:border-gray-600 transition-colors">
             <motion.div 
               className="w-1 h-2 bg-gray-400 dark:bg-gray-600 rounded-full"

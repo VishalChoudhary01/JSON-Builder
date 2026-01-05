@@ -10,7 +10,7 @@ const ModernButton = ({ children, variant = "primary", icon, className = "" }) =
   };
   
   return (
-    <button className={`group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all duration-300 ${variants[variant]} ${className}`}>
+    <button className={`group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-roboto font-medium transition-all duration-300 ${variants[variant]} ${className}`}>
       {icon}
       {children}
     </button>

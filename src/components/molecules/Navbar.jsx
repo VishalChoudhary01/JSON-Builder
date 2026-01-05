@@ -61,7 +61,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-all duration-200"
+                className="px-4 py-2 text-sm font-medium font-roboto text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-all duration-200"
               >
                 {link.name}
               </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
               </motion.div>
             </button>
 
-            <button className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            <button className="px-4 py-2 text-sm font-medium font-roboto text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               Sign In
             </button>
             <ModernButton 

@@ -31,7 +31,7 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
   };
 
   return (
-    <div className={`${depth > 0 ? "ml-6 pl-4 border-l border-gray-200" : ""} space-y-3  w-full`}>
+    <div className={`${depth > 0 ? "ml-6 pl-4 border-l border-gray-200 dark:border-gray-700/50" : ""} space-y-3 w-full`}>
       <AnimatePresence>
       {fields.map((field, index) => {
       
@@ -47,13 +47,13 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
           >
-          <Card  className="  shadow-sm">
+          <Card  className="bg-white/80 dark:bg-black/30 backdrop-blur-lg border border-gray-200 dark:border-gray-800/50 shadow-sm">
             <CardContent className="md:p-4 px-2 py-1.5 custom-scroll overflow-x-auto space-y-3">
               <div className="flex gap-3 items-start">
                 <Input
                   {...register(`${base}.key`)}
                   placeholder="Field name"
-                  className="flex-1 outline-none focus:ring focus ring-neutral-200"
+                  className="flex-1 outline-none focus:ring focus ring-neutral-200 dark:bg-black/30 dark:border-gray-700/50"
                 />
                 
                 <Select
@@ -61,12 +61,12 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
                   defaultValue={field.type}
                   className="outline-none"
                 >
-                  <SelectTrigger className="w-[140px]">
+                  <SelectTrigger className="w-[140px] dark:bg-black/30 dark:border-gray-700/50">
                     <SelectValue placeholder="Type" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="dark:bg-black/50 dark:backdrop-blur-xl dark:border-gray-700/50">
                     {TYPE_OPTIONS.map((opt) => (
-                      <SelectItem key={opt} value={opt}>
+                      <SelectItem key={opt} value={opt} className="dark:hover:bg-gray-800/50">
                         {opt}
                       </SelectItem>
                     ))}
@@ -84,11 +84,11 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
                 </Button>
               </div>
 
-              <Separator className="my-2" />
+              <Separator className="my-2 dark:bg-gray-700/50" />
 
               {type === "object" || type === "array" ? (
                 <div className="pt-2">
-                  <h4 className="text-sm font-medium mb-2 text-gray-700">
+                  <h4 className="text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                     {type === "object" ? "Object Properties" : "Array Items"}
                   </h4>
                   <JsonField nestPath={`${base}.children`} depth={depth + 1} />
@@ -98,12 +98,12 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
                   onValueChange={(val) => setValue(`${base}.value`, val)}
                   defaultValue={field.value || "true"}
                 >
-                  <SelectTrigger className="w-[140px]">
+                  <SelectTrigger className="w-[140px] dark:bg-black/30 dark:border-gray-700/50">
                     <SelectValue placeholder="Value" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="true">true</SelectItem>
-                    <SelectItem value="false">false</SelectItem>
+                  <SelectContent className="dark:bg-black/50 dark:backdrop-blur-xl dark:border-gray-700/50">
+                    <SelectItem value="true" className="dark:hover:bg-gray-800/50">true</SelectItem>
+                    <SelectItem value="false" className="dark:hover:bg-gray-800/50">false</SelectItem>
                   </SelectContent>
                 </Select>
               ) : (
@@ -111,6 +111,7 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
                   {...register(`${base}.value`)}
                   placeholder={`Enter ${type} value`}
                   type={type === "number" ? "number" : "text"}
+                  className="dark:bg-black/30 dark:border-gray-700/50"
                 />
               )}
             </CardContent>
@@ -123,7 +124,7 @@ const JsonField = ({ nestPath = "fields", depth = 0 }) => {
         type="button" 
         onClick={handleAddField}
         variant="outline"
-        className="mt-2 md:w-[100px] border-dashed hover:bg-gray-50"
+        className="mt-2 md:w-[100px] border-dashed dark:border-gray-700/50 dark:bg-black/30 dark:hover:bg-black/50"
       >
         <HiPlus className="" />
         Add Field
