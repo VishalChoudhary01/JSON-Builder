@@ -1,18 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins, Roboto, DM_Mono, Quicksand, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/molecules/Navbar";
 
-// Primary fonts you're already using
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 // Additional fonts
 const poppins = Poppins({
@@ -57,8 +46,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`
-          ${geistSans.variable}
-          ${geistMono.variable}
           ${poppins.variable}
           ${roboto.variable}
           ${dmMono.variable}
